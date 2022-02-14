@@ -10,9 +10,6 @@
 #include <errno.h>
 #include <fcntl.h>
 
-// #include <sys/stat.h>
-// #include <sys/types.h>
-
 #define BUFFER_SIZE 2000
 #define TOKENS_SIZE 2000
 #define CWD_MAX 2000
@@ -32,9 +29,9 @@ int listDir(char *dir)
     }
 
     /* DIR *opendir(const char *name);
-     *
      * Open a directory stream to argv[1] and make sure
-     * it's a readable and valid (directory) */
+     * it's a readable and valid (directory)
+     */
     if ((dip = opendir(dir)) == NULL)
     {
 
@@ -236,7 +233,7 @@ int main(int argc, char **argv)
             int result = chdir(tokens[1]);
             if (result == -1)
             {
-                perror("Error");
+                perror("Can not find the directory.");
             }
             // perror("There are no directroy."); How to deal with the serror.
         }
@@ -246,7 +243,7 @@ int main(int argc, char **argv)
             int result = mkdir(dirName, S_IRWXU);
             if (result == -1)
             {
-                perror("Error");
+                perror("No file name in argument.");
             }
         }
         else if (strcmp(tokens[0], "rmdir") == 0)
@@ -255,16 +252,14 @@ int main(int argc, char **argv)
             int result = rmdir(dirName);
             if (result == -1)
             {
-                perror("Error");
+                perror("Cannot find the directory in your argument.");
             }
         }
-        else
+        else // search for other executables in the commend line.
         {
 
             int index = 0;
-
             int isThereSign = -1;
-
             while (tokens[index] != 0)
             {
                 if (strcmp(tokens[index], ">") == 0)
