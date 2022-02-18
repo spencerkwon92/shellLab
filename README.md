@@ -1,9 +1,5 @@
 # Shell Lap Project
 
-Created: January 23, 2022 2:21 AM
-
-[Github] [https://github.com/spencerkwon92/shellLab](https://github.com/spencerkwon92/shellLab)
-
 ## Development Objectives.
 
 1. Implementing following shell-command.
@@ -20,6 +16,6 @@ Created: January 23, 2022 2:21 AM
 
 ![Screen Shot 2022-02-13 at 7.40.44 PM.png](images/Screen_Shot_2022-02-13_at_7.40.44_PM.png)
 
-1. running other executable.
+2. running other executable.
 
-![Screen Shot 2022-02-13 at 7.58.42 PM.png](ShellLab/images/Screen_Shot_2022-02-13_at_7.58.42_PM.png)
+![Screen Shot 2022-02-13 at 7.58.42 PM.png](images/Screen_Shot_2022-02-13_at_7.58.42_PM.png)
